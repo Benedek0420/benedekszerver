@@ -1,0 +1,196 @@
+/* BODY – alap háttér kékes */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: rgba(24, 90, 219, 0.85); /* beléptető szín */
+  color: white;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fő tartalom kitölti a maradék helyet a footer előtt */
+main {
+  flex: 1;
+}
+
+/* Minden linknek nincs aláhúzás */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* NAVBAR */
+.link {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(24, 90, 219, 0.85);  /* háttér szín */
+  border-bottom: 2px solid rgb(255,255,255); /* fehér alap */
+  box-shadow: 0 2px 8px rgba(255,255,255,0.6), 0 2px 15px rgba(255,255,255,0.3); /* világítós hatás */
+  padding: 20px 25px;
+}
+
+.sor {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.sor a {
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 2px solid rgb(0,0,0);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.8);
+  transition: 0.3s;
+  margin-right: 8px; /* kis térköz */
+}
+
+.sor a:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px rgba(255,255,255,0.8), 0 0 25px rgba(255,255,255,0.5); /* hover világítás */
+}
+
+.sor h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  color: white;
+  font-size: 24px;
+  text-shadow: 0 0 6px rgba(255,255,255,0.8); /* cím világítás */
+}
+
+.adat.fullwidth {
+  display: block;
+  width: 95%;  /* majdnem teljes szélesség */
+  margin: 20px auto; /* középre és kis térköz */
+  text-align: center;
+}
+
+/* Belépés és hibaoldal */
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background: rgba(24, 90, 219, 0.85);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.login-box input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.login-box button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(24, 90, 219, 0.85);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 8px rgba(255,255,255,0.6), 0 0 15px rgba(255,255,255,0.3);
+}
+
+.login-box button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px rgba(255,255,255,0.8), 0 0 25px rgba(255,255,255,0.5);
+}
+
+.info {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+/* Galéria oldal */
+.galeria-title {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 28px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 8px; /* kis térköz */
+  padding: 20px;
+}
+
+.gallery img, .gallery video {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid rgb(0,0,0);
+  box-shadow: 0 0 8px rgba(255,255,255,0.6);
+  transition: 0.3s;
+}
+
+/* Folder és fájl linkek */
+.folder, .adat, .gallery a {
+  background: rgba(24, 90, 219, 0.85);
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px solid rgb(0,0,0);
+  box-shadow: 0 0 8px rgba(255,255,255,0.6);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.3s;
+  margin: 30px; /* kis térköz */
+}
+
+.adat {
+  height: 4vh;
+}
+
+.adat a {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+/* HOVER minden gombra/linkre */
+.sor a:hover,
+.adat:hover,
+.gallery a:hover,
+.folder:hover,
+.login-box button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px rgba(255,255,255,0.8), 0 0 25px rgba(255,255,255,0.5);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border-top: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 -0px 15px rgba(255,255,255,0.6), 0 0 20px rgba(255,255,255,0.3);
+  backdrop-filter: blur(5px);
+}

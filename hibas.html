@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hibás kód</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+  <div class="login-box">
+    <h2>❌ Hibás kód!</h2>
+    <p class="info">A megadott kód nem megfelelő.<br>Próbáld újra!</p>
+    <button onclick="window.location.href='index.html'">Vissza</button>
+  </div>
+
+  <script>
+    const visszaGomb = document.querySelector("button");
+
+    // Kattintás
+    visszaGomb.addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+
+    // Enter lenyomás
+    document.addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        window.location.href = "index.html";
+      }
+    });
+  </script>
+</body>
+</html>

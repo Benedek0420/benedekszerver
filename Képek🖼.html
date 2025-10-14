@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mappa 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>
+  if (localStorage.getItem("belepve") !== "igen") {
+    window.location.href = "index.html";
+  }
+</script>
+
+<h1 class="galeria-title">Mappa 2</h1>
+
+<div class="gallery">
+  <img src="kepek/kep1.jpg" alt="Kép 1">
+  <img src="kepek/kep2.jpg" alt="Kép 2">
+  <img src="kepek/kep3.jpg" alt="Kép 3">
+</div>
+
+<a href="galeria.html" class="folder" style="margin:30px auto; display:block; width:120px;">🔙 Vissza</a>
+</body>
+</html>
