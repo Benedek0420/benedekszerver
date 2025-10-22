@@ -1,26 +1,54 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mappa 2</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Képek 🖼</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .error { color: rgb(255, 255, 255); margin-top: 10px; }
+</style>
 </head>
 <body>
+
+  <!-- NAVBAR -->
+  <header class="link">
+    <div class="sor">
+      <a href="galeria.html">Vissza</a>
+      <h1>Képek 🖼</h1>
+    </div>
+  </header>
+
+  <!-- Fő tartalom -->
+  <main style="padding: 20px;">
+    <a href="https://my.storageshare.cloud/s/difLSK6Q89emmLk" class="adat fullwidth" target="_blank">Kép fájl feltöltő</a>
+    
+    <!-- Szerkesztő / tároló link kód ellenőrzéssel -->
+    <button id="editLink" class="adat fullwidth">Kép fájl szerkesztő / tároló</button>
+    <p class="error" id="errorMsg"></p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Benedek szervere
+  </footer>
+
 <script>
-  if (localStorage.getItem("belepve") !== "igen") {
-    window.location.href = "index.html";
-  }
+const button = document.getElementById("editLink");
+const errorMsg = document.getElementById("errorMsg");
+const helyesKod = "201004";  // Ide írd a jelszót
+const celLink = "https://my.storageshare.cloud/s/JRQAjBjAzsF6dHL"; // link
+
+button.addEventListener("click", function() {
+    const kod = prompt("Írd be a kódot:");
+    if(kod === helyesKod) {
+        window.open(celLink, "_blank");
+        errorMsg.textContent = ""; // ha jó a kód, eltünteti a hibaüzenetet
+    } else {
+        errorMsg.textContent = "Hibás kód! Próbáld újra.";
+    }
+});
 </script>
 
-<h1 class="galeria-title">Mappa 2</h1>
-
-<div class="gallery">
-  <img src="kepek/kep1.jpg" alt="Kép 1">
-  <img src="kepek/kep2.jpg" alt="Kép 2">
-  <img src="kepek/kep3.jpg" alt="Kép 3">
-</div>
-
-<a href="galeria.html" class="folder" style="margin:30px auto; display:block; width:120px;">🔙 Vissza</a>
 </body>
 </html>

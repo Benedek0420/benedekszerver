@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prezentációk 🎭</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  .error { color: rgb(255, 255, 255); margin-top: 10px; }
+</style>
 </head>
 <body>
 
@@ -18,19 +21,34 @@
 
   <!-- Fő tartalom -->
   <main style="padding: 20px;">
-    <a href="ZGDÖK prezi 2025-10.pptx" class="adat fullwidth">ZGDÖK PPT</a>
-    <a href="ZGDÖK prezi 2025-10.pptx" class="adat fullwidth">PPT 2</a>
-    <a href="ZGDÖK prezi 2025-10.pptx" class="adat fullwidth">PPT 3</a>
-    <a href="ZGDÖK prezi 2025-10.pptx" class="adat fullwidth">PPT 4</a>
-    <a href="ZGDÖK prezi 2025-10.pptx" class="adat fullwidth">PPT 5</a>
-    <a href="ZGDÖK prezi 2025-10.pptx" class="adat fullwidth">PPT 6</a>
-    <a href="ZGDÖK prezi 2025-10.pptx" class="adat fullwidth">PPT 7</a>
+    <a href="https://my.storageshare.cloud/s/MiYginfNfggbcrD" class="adat fullwidth" target="_blank">Exel feltöltő</a>
+    
+    <!-- Szerkesztő / tároló link kód ellenőrzéssel -->
+    <button id="editLink" class="adat fullwidth">Exel szerkesztő / tároló</button>
+    <p class="error" id="errorMsg"></p>
   </main>
 
   <!-- Footer -->
   <footer>
     &copy; 2025 Benedek szervere
   </footer>
+
+<script>
+const button = document.getElementById("editLink");
+const errorMsg = document.getElementById("errorMsg");
+const helyesKod = "201004";  // Ide írd a jelszót
+const celLink = "https://my.storageshare.cloud/s/rt3TGf6mdnqiDJp"; // link
+
+button.addEventListener("click", function() {
+    const kod = prompt("Írd be a kódot:");
+    if(kod === helyesKod) {
+        window.open(celLink, "_blank");
+        errorMsg.textContent = "";
+    } else {
+        errorMsg.textContent = "Hibás kód! Próbáld újra.";
+    }
+});
+</script>
 
 </body>
 </html>
