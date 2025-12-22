@@ -21,10 +21,14 @@
 
   <!-- Fő tartalom -->
   <main style="padding: 20px;">
-    <a href="https://my.storageshare.cloud/s/kxQ7Td5yK24r7LX" class="adat fullwidth" target="_blank">Barátok ❤ feltöltő</a>
-    
     <!-- Szerkesztő / tároló link -->
-    <button id="editLink" class="adat fullwidth">Barátok ❤ szerkesztő / tároló</button>
+    <button id="editLink" class="adat fullwidth">Kata mappa</button>
+    <p class="error" id="errorMsg"></p>
+
+    <button id="editLink" class="adat fullwidth">Zsezse mappa</button>
+    <p class="error" id="errorMsg"></p>
+
+    <button id="editLink" class="adat fullwidth">Adél mappa</button>
     <p class="error" id="errorMsg"></p>
   </main>
 
@@ -36,7 +40,7 @@
 <script>
 const button = document.getElementById("editLink");
 const errorMsg = document.getElementById("errorMsg");
-const helyesKod = "Benedek2010_";  // Ide írd a jelszót
+const helyesKod = "Kata0806";  // Ide írd a jelszót
 const celLink = "https://my.storageshare.cloud/s/iitm6NPpAcJ7aDB"; // link
 
 button.addEventListener("click", function() {

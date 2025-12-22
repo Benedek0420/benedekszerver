@@ -141,8 +141,9 @@ a {
 /* Folder és fájl linkek */
 .folder, .adat, .gallery a {
   background: rgba(24, 90, 219, 0.85);
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 15px;
+  color: white;
   border: 2px solid rgb(0,0,0);
   box-shadow: 0 0 6px rgba(255,255,255,0.6);
   font-weight: bold;
